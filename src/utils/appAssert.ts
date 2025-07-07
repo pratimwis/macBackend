@@ -1,5 +1,5 @@
 
-import assert from "node:assert";
+import assert from 'assert';
 import AppError from "./appError";
 import { HttpStatusCode } from "../constant/http";
 import AppErrorCode from "../constant//appErrorCode";
