@@ -141,10 +141,10 @@ export const systemRegisterRequest = catchErrors(async (req, res) => {
     .json({ message: "System Register , please login", success: true, user });
 });
 
-// export const checkAuth = catchErrors(async (req, res) => {
-//   const user = req.user;
-//   appAssert(user, NOT_FOUND, "User not found", AppErrorCode.UserNotFound);
-//   res
-//     .status(OK)
-//     .json({ message: "User is authenticated", success: true, user });
-// });
+export const checkAuth = catchErrors(async (req, res) => {
+  const user = req.user;
+  appAssert(user, NOT_FOUND, "User not found", AppErrorCode.UserNotFound);
+  res
+    .status(OK)
+    .json({ message: "User is authenticated", success: true, user });
+});
