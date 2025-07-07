@@ -106,7 +106,7 @@ export const systemRegisterRequest = catchErrors(async (req, res) => {
   const userMacAddresses = user?.macAddresses || [];
   const macRequests = user?.macRequests || [];
   const alreadyRequested = macRequests.some(
-    (macRequest) => macRequest.mac === macAddress
+    (macRequest:any) => macRequest.mac === macAddress
   );
 
   appAssert(
